@@ -18,30 +18,30 @@ class Solution:
         # if bod is left with more than 1 char apart from that vowel alice always wins, if left with single char i.e., vowel 
         # then bob lost the game
         # here find the max lenght string with EVEN vowels - 1 vowel
-        need = vow - 1
-        cnt = 0
-        print(need)
-        new_str = []
-        while L <= R and R < len(s):
-            # print(cnt)
-            if s[R] in "aeiou":
-                cnt += 1
-            if cnt == need:
-                # print( s[:L] ,s[R:])
-                new_str = s[:L] + s[R+1:]
-                break
-            if cnt > need:
-                while L < R:
-                    if s[L] in "aeiou":
-                        cnt -= 1
-                    L += 1
-            R += 1
-        # new_str = s[:L] + s[R:]
+        # need = vow - 1
+        # cnt = 0
+        # print(need)
+        # new_str = []
+        # while L <= R and R < len(s):
+        #     # print(cnt)
+        #     if s[R] in "aeiou":
+        #         cnt += 1
+        #     if cnt == need:
+        #         # print( s[:L] ,s[R:])
+        #         new_str = s[:L] + s[R+1:]
+        #         break
+        #     if cnt > need:
+        #         while L < R:
+        #             if s[L] in "aeiou":
+        #                 cnt -= 1
+        #             L += 1
+        #     R += 1
+        # # new_str = s[:L] + s[R:]
     
-        print(new_str)
-        cnt = 0
-        if len(new_str) > 1 :
-            return True
+        # print(new_str)
+        # cnt = 0
+        # if len(new_str) > 1 :
+        #     return True
 
         return True
 
