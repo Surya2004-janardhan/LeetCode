@@ -1,10 +1,10 @@
 class Solution:
     def doesAliceWin(self, s: str) -> bool:
-        s = list(s)
-        L = 0
-        R = 0
-        print(s)
-        alice = 1
+        # s = list(s)
+        # L = 0
+        # R = 0
+        # print(s)
+        # alice = 1
         vow = 0
         for i in s:
             if i in "aeiou":
