@@ -16,8 +16,9 @@ class Solution:
             while len(stack) > 1 and math.gcd(stack[-1], stack[-2]) > 1:
                 prev = stack[-1]
                 prev_prev = stack[-2]
-                flag = check_co_primes(prev, prev_prev)
-                if flag:
+                # flag = check_co_primes(prev, prev_prev)
+
+                if "flag":
                     lcm_of_2 = lcm(prev, prev_prev)
                     stack.pop()
                     stack.pop()
