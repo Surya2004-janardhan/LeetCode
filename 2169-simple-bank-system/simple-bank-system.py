@@ -2,11 +2,12 @@ class Bank:
 
     def __init__(self, balance: List[int]):
         self.balance = balance
+        self.len_b = len(balance)
         
 
     def transfer(self, account1: int, account2: int, money: int) -> bool:
         
-        if len(self.balance) >= account1-1 and len(self.balance) >= account2-1 and self.balance[account1-1] >= money:
+        if self.len_b >= account1-1 and self.len_b >= account2-1 and self.balance[account1-1] >= money:
             self.balance[account1-1] -= money
             self.balance[account2-1] += money
             return True
@@ -15,7 +16,7 @@ class Bank:
 
     def deposit(self, account: int, money: int) -> bool:
 
-        if len(self.balance) >= account-1 :
+        if self.len_b >= account-1 :
             self.balance[account-1] += money
             return True
         return False
@@ -23,7 +24,7 @@ class Bank:
 
     def withdraw(self, account: int, money: int) -> bool:
         
-        if len(self.balance) >= account-1 and self.balance[account-1] >= money :
+        if self.len_b >= account-1 and self.balance[account-1] >= money :
             self.balance[account-1] -= money
             return True
         return False
