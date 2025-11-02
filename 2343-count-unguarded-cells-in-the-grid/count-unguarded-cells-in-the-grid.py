@@ -8,7 +8,7 @@ class Solution:
             a,b = i[0],i[1]
             grid[a][b] = 'W'
 
-        def bfs(i,j):
+        def marked(i,j):
             # mark this shit as w so that will be gone in continue
 
             # mark right
@@ -55,6 +55,6 @@ class Solution:
             for j in range(n):
                 curr = grid[i][j]
                 if curr == 'G':
-                    bfs(i, j)
+                    marked(i, j)
         print(grid)
         return sum( grid[i][j] == 0 for i in range(m) for j in range(n)) 
