@@ -25,7 +25,6 @@ class Solution:
                 limits["Cmax"+str(C)] =    max(R, limits["Cmax"+str(C)])
             else:
                 limits["Cmax"+str(C)] = R
-        print(limits)
         ans = 0
         for i in buildings:
             R, C = i[0], i[1]
