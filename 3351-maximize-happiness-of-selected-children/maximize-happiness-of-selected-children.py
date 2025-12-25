@@ -7,5 +7,5 @@ class Solution:
             curr = max(-heapq.heappop(heap) - i, 0 )
             ans += curr
 
-        print(happiness)
+        # print(happiness)
         return ans
