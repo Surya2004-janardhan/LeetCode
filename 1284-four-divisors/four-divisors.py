@@ -4,17 +4,19 @@ class Solution:
         ans = 0
 
         def is_4_divisors(num):
-            divisors = [1, num]
+            divisors = 1+num
+            cnt = 2
             for i in range(2,int(num**0.5)+1):
-                if len(divisors) > 4:
+                if cnt > 4:
                     return False, 0
                 if num % i == 0:
-                    divisors.append(i)
+                    divisors += i
+                    cnt += 1
                     if i != num//i:
-                        divisors.append(num//i)
-            if len(divisors) == 4:
-                return True, sum(divisors)
-            print(divisors, num)
+                        divisors += num//i
+                        cnt += 1
+            if cnt == 4:
+                return True, divisors
 
             return False, 0
 
