@@ -13,7 +13,6 @@ class Solution:
                     if i != num//i:
                         divisors.append(num//i)
             if len(divisors) == 4:
-                print(divisors, num)
                 return True, sum(divisors)
             print(divisors, num)
 
