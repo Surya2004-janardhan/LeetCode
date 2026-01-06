@@ -31,7 +31,7 @@ class Solution:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
-            print(level_Sum, prev_sum, currLevel)
+            # print(level_Sum, prev_sum, currLevel)
             if level_Sum > prev_sum:
                 prev_sum = level_Sum
                 min_level = currLevel
