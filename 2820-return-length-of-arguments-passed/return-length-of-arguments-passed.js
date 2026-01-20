@@ -4,7 +4,7 @@
  */
 var argumentsLength = function(...args) {
 
-    return [...args].length
+    return args.length
     
 };
 
